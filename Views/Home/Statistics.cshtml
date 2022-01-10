@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Pui_Madalina_Proiect.Models.CollectionViewModels.OrderGroup>
+@{
+    ViewData["Title"] = "Ordered Games Statistics";
+}
+<h2>Ordered Games Statistics</h2>
+<table>
+    <tr>
+        <th>
+            Order Date
+        </th>
+        <th>
+            Ordered Games
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderDate)
+            </td>
+            <td>
+                @item.GameCount
+            </td>
+        </tr>
+    }
+</table>
